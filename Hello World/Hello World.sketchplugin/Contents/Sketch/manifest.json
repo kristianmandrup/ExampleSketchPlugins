@@ -1,0 +1,23 @@
+{
+  "author" : "Johnnie Walker",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "onRun",
+      "shortcut" : "",
+      "name" : "Hello World!",
+      "identifier" : "helloworld"
+    },
+  ],
+  "menu": {
+    "isRoot": true,
+    "items": [
+      "helloworld",
+    ],
+  },
+  "identifier" : "com.example.sketch.helloworld",
+  "version" : "1.0",
+  "description" : "Example Sketch Plugin using resources from within the bundle and a library script.",
+  "authorEmail" : "mail@example.com",
+  "name" : "Hello World!"
+}

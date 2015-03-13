@@ -1,0 +1,38 @@
+{
+  "author" : "Johnnie Walker",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "handler" : "tagSelectedLayers",
+      "shortcut" : "cmd ctrl t",
+      "name" : "Tag Selected Layers",
+      "identifier" : "tagSelectedLayers"
+    },
+    {
+      "script" : "script.cocoascript",
+      "handler" : "showTaggedLayers",
+      "shortcut" : "cmd ctrl h",
+      "name" : "Show Tagged Layers",
+      "identifier" : "showTaggedLayers"
+    },
+    {
+      "script" : "script.cocoascript",
+      "handler" : "hideTaggedLayers",
+      "shortcut" : "cmd ctrl shift h",
+      "name" : "Hide Tagged Layers",
+      "identifier" : "hideTaggedLayers"
+    }
+  ],
+  "menu": {
+    "items": [
+      "tagSelectedLayers",
+      "showTaggedLayers",
+      "hideTaggedLayers"
+    ]
+  },
+  "identifier" : "com.example.sketch.tagged-layers",
+  "version" : "1.0",
+  "description" : "A sample plugin which shows and hides a tagged selection of layers.",
+  "authorEmail" : "mail@example.com",
+  "name" : "Tagged Layers"
+}

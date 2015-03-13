@@ -1,2 +1,5 @@
-# ExampleSketchPlugins
-Some example plugins for Sketch.
+# Example Sketch Plugins
+
+Some example plugins for [Sketch][].
+
+[Sketch]: http://bohemiancoding.com/sketch/

@@ -21,6 +21,9 @@ var onRun = function(context) {
   // center on the canvas
   SketchLib.util.centerLayer(textLayer);
 
+  // resize the group to contain its children
+  [group resizeRoot:true];
+
   // center the view on our new group
   [[doc currentView] centerRect:[group rect]];
 };

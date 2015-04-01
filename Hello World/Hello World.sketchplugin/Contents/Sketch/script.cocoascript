@@ -4,7 +4,7 @@ var onRun = function(context) {
   // Context is a dictionary containing a reference to the document, 
   // the current selection, the plugin, curren URL and more.
   
-  var doc = context.doc;                // the current document (MSDocument)
+  var doc = context.document;                // the current document (MSDocument)
   var plugin = context.plugin;          // the plugin (MSPluginBundle)
   var page = [doc currentPage];         // the current page (MSPage)
   

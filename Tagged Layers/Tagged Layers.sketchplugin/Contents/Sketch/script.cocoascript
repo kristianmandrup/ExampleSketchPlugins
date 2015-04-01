@@ -2,7 +2,7 @@
 var tagSelectedLayers = function(context) {
   var selection = context.selection;    // An NSArray of MSLayers
   var command = context.command;        // The current command (MSPluginCommand)
-  var doc = context.doc;                // the current document (MSDocument)
+  var doc = context.document;                // the current document (MSDocument)
   var page = [doc currentPage];         // the current page (MSPage)
   var layers = [page children];         // A flattened array (NSArray) of all layers in `page`
   

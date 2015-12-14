@@ -69,18 +69,15 @@ var SketchLib = {
 
     if (typeof(image) !== 'undefined' && image !== null) {
       var originalImageSize = [image size];
-
       var fill = [[[imageLayer style] fills] addNewStylePart];
       [fill setIsEnabled:false];
-
       [imageLayer setConstrainProportions:false];
-      [imageLayer setImage:imageData];
+      [imageLayer setImage:[MSImageProxy proxyWithImageData:imageData]];
       var rect = CGRectZero;
       rect.size = originalImageSize;
       [imageLayer setRect:rect];
       [imageLayer setConstrainProportions:true];
     }
-
     return imageLayer;
   },
   // Adds a new shape group (MSShapeGroup) as a child of `container`
@@ -94,7 +91,7 @@ var SketchLib = {
     // Returns an MSImageData object for `image` (NSImage)
     "imageDataFromImage": function(container, image) {
       var imageCollection = [[container documentData] images];
-      return [imageCollection addImage:image convertColourspace:false];
+      return [imageCollection addNSImage:image convertColourspace:false];
     },
 
     // Returns an MSImageData object for `url` (NSURL)

@@ -2,14 +2,26 @@
 
 This plugin can read an Aurelia CLI project and create Sketch artboards with layers and appropriate meta-data using layer tagging.
 
+We can add and manage these extra tags (metadata) in a similar fashion as demonstrated by [Sketch Notebook](http://marcosvid.al/sketch-notebook/), see [repo](https://github.com/marcosvidal/Sketch-Notebook).
+
+It uses a separate panel with comments for each layer, we could likewise add/manage layer metadata.
+
 ## Read CLI project
+The Aurelia project reader needs to handle the following:
+
+- CSS styling
+- Globals
+- Routers & Templates
+- Custom elements & attributes
+- Routing & composition
+- File locations
 
 ### CSS styling
 Add a plugin command option to open/parse an Aurelia project via path or Cocoa file open dialog. Project is read via `aurelia_project/aurelia.json` file, and `/src` folder.
 
 From the `aurelia.json` we gather all the `.css` sources found in `vendor-libs.js` bundle. We also walk any directory of `app.js` bundle to find css files. we then build up a global path->css file map for use later.
 
-We use the CSS sketch plugin to link the CSS to the Sketch layers.
+We use the [CSS sketch plugin](https://medium.com/sketch-app-sources/programmers-design-differently-why-i-built-a-css-plugin-for-sketch-3-52a1246305a4#.bzdzhpg2k) with [repo](https://github.com/JohnCoates/CSSketch) to link the CSS to the Sketch layers.
 
 ### Globals
 Custom elements can be imported either via `<require>` or by making global elements, by convention in `resources/elements`

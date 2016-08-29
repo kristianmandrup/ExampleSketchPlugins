@@ -70,7 +70,7 @@ For `<navigation router.bind="router" class="primary-navigation"></navigation>`B
 
 ```html
   <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
-    <a href.bind="row.href">${row.title}</a>
+<a href.bind="row.href">${row.title}</a>
   </li>
 ```
 
@@ -78,15 +78,15 @@ We build the metadata using the `routes.json` data. We assume the first row is a
 
 ```html
   <li class="au-target" au-target-id="1">
-    <a href.bind="row.href" class="au-target" au-target-id="2" href="#/profile">Profile</a>
+<a href.bind="row.href" class="au-target" au-target-id="2" href="#/profile">Profile</a>
   </li>
 ```
 
 Sometimes `route-href` is used instead for more complex routes:
 
 ```html
-      <li repeat.for="contact of contacts" class="list-group-item ${contact.id === $parent.selectedId ? 'active' : ''}">
-        <a route-href="route: contacts; params.bind: {id:contact.id}" 
+<li repeat.for="contact of contacts" class="list-group-item ${contact.id === $parent.selectedId ? 'active' : ''}">
+<a route-href="route: contacts; params.bind: {id:contact.id}"
 ```
 
 For the `repeat.for` we have to disregard it in most (complex) cases, but we can always try to make one `<li>`. We also disregard any string interpolation.
@@ -161,7 +161,7 @@ config.map([
 `<router-view layout="views/layout-default.html"></router-view>`
 
 ### Custom elements attributes
-For each custom attribute, we tag the layer with it, so we can re-export without losing it!
+For each custom attribute, we tag the layer with it, so we can re-export without losing it. For tagging, see [Tagged layers example](https://github.com/kristianmandrup/ExampleSketchPlugins/blob/master/Tagged%20Layers/Tagged%20Layers.sketchplugin/Contents/Sketch/script.cocoascript)
 
 `addAttribute(layer, "value.bind", "colors")`
 
@@ -181,8 +181,8 @@ Custom attributes are those with `.` or `-`. For the compose element, we can ins
 
 ```
   <compose view-model="hello"
-           view.bind="hello.html"
-           model.bind="{ target : 'World' }" ></compose>
+       view.bind="hello.html"
+       model.bind="{ target : 'World' }" ></compose>
 ```
 
 We can use `as-element` as a kind of special compose.
